@@ -1,0 +1,31 @@
+{
+  "name": "json-format",
+  "version": "0.0.1",
+  "description": "JSON format for good presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:luizstacio/json-format.git"
+  },
+  "keywords": [
+    "json",
+    "format",
+    "json",
+    "pretty",
+    "json",
+    "write",
+    "identation",
+    "json",
+    "ident",
+    "format"
+  ],
+  "author": "luizstacio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luizstacio/json-format/issues"
+  },
+  "homepage": "https://github.com/luizstacio/json-format"
+}

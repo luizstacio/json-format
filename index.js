@@ -13,10 +13,10 @@ var p = [],
   pop = function( m, i ) { return p[i-1] },
   tabs = function( count ) { return new Array( count + 1 ).join( '\t' ); };
 
-function JSONFormat ( json ) {
+function JSONFormat ( json, initialIndent ) {
   p = [];
   var out = "",
-      indent = 0;
+      indent = initialIndent || 0;
 
   // Extract backslashes and strings
   json = json
@@ -59,6 +59,6 @@ function JSONFormat ( json ) {
   return out;
 };
 
-module.exports = function(json){
-  return JSONFormat(JSON.stringify(json));
+module.exports = function(json, initialIndent){
+  return JSONFormat(JSON.stringify(json), initialIndent);
 }

@@ -9,11 +9,18 @@
   http://www.opensource.org/licenses/mit-license.php
 */
 var p = [],
+  indentConfig = {
+    tab: { char: '\t', size: 1 },
+    space: { char: ' ', size: 4 }
+  },
+  configDefault = {
+    type: 'tab'
+  },
   push = function( m ) { return '\\' + p.push( m ) + '\\'; },
   pop = function( m, i ) { return p[i-1] },
-  tabs = function( count ) { return new Array( count + 1 ).join( '\t' ); };
+  tabs = function( count, indentType) { return new Array( count + 1 ).join( indentType ); };
 
-function JSONFormat ( json ) {
+function JSONFormat ( json, indentType ) {
   p = [];
   var out = "",
       indent = 0;
@@ -31,14 +38,14 @@ function JSONFormat ( json ) {
     switch(c) {
       case '{':
       case '[':
-        out += c + "\n" + tabs(++indent);
+        out += c + "\n" + tabs(++indent, indentType);
         break;
       case '}':
       case ']':
-        out += "\n" + tabs(--indent) + c;
+        out += "\n" + tabs(--indent, indentType) + c;
         break;
       case ',':
-        out += ",\n" + tabs(indent);
+        out += ",\n" + tabs(indent, indentType);
         break;
       case ':':
         out += ": ";
@@ -59,6 +66,15 @@ function JSONFormat ( json ) {
   return out;
 };
 
-module.exports = function(json){
-  return JSONFormat(JSON.stringify(json));
+module.exports = function(json, config){
+  config = config || configDefault;
+  var indent = indentConfig[config.type];
+
+  if ( indent == null ) {
+    throw('[' + config.type + '] is not compatible!');
+  } else {
+    indentType = new Array((config.size || indent.size) + 1).join(indent.char);
+  }
+
+  return JSONFormat(JSON.stringify(json), indentType);
 }

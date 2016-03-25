@@ -71,7 +71,7 @@ module.exports = function(json, config){
   var indent = indentConfig[config.type];
 
   if ( indent == null ) {
-    throw new Error('Unrecognized ident type: "' + config.type + '"');
+    throw new Error('Unrecognized indent type: "' + config.type + '"');
   }
   var indentType = new Array((config.size || indent.size) + 1).join(indent.char);
   return JSONFormat(JSON.stringify(json), indentType);

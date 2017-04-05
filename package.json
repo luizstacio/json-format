@@ -4,7 +4,7 @@
   "description": "JSON format for good presentation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/luizstacio/json-format/issues"
   },
-  "homepage": "https://github.com/luizstacio/json-format"
+  "homepage": "https://github.com/luizstacio/json-format",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
 }

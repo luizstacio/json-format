@@ -1,6 +1,8 @@
 json-format
 ==========
 
+[![Build Status](https://travis-ci.org/luizstacio/json-format.svg?branch=master)](https://travis-ci.org/luizstacio/json-format.svg?branch=master)
+
 Parse JavaScript Object to a JSON String indented.
 
 #### Instaling

@@ -1,6 +1,6 @@
 {
   "name": "json-format",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON format for good presentation",
   "main": "index.js",
   "scripts": {

@@ -56,15 +56,15 @@ Parse JavaScript Object to a JSON String indented.
 #### Default sizes
 ``` json
 {
-  tab: { size: 1 },
-  space: { size: 4 }
+  "tab": { "size": 1 },
+  "space": { "size": 4 }
 }
 ```
 
 #### Config default
 ``` json
 {
-  type: 'tab'
+  "type": "tab"
 }
 ```
 

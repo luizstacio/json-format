@@ -11,7 +11,7 @@ Parse JavaScript Object to a JSON String indented.
 ```
 
 #### Usage
-```
+``` js
   var jsonFormat = require('./');
   var fs = require('fs');
   var obj = {
@@ -38,7 +38,7 @@ Parse JavaScript Object to a JSON String indented.
 ```
 
 ##### Result `example_tabs.json`
-```
+``` json
 {
     "a": 1,
     "b": 2
@@ -46,7 +46,7 @@ Parse JavaScript Object to a JSON String indented.
 ```
 
 ##### Result `example_spaces.json`
-```
+``` json
 {
   "a": 1,
   "b": 2
@@ -54,7 +54,7 @@ Parse JavaScript Object to a JSON String indented.
 ```
 
 #### Default sizes
-```
+``` json
 {
   tab: { size: 1 },
   space: { size: 4 }
@@ -62,7 +62,7 @@ Parse JavaScript Object to a JSON String indented.
 ```
 
 #### Config default
-```
+``` json
 {
   type: 'tab'
 }
